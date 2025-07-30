@@ -116,8 +116,11 @@ def run_experiment(df, feature_names, label_name, learning_rate, epochs, batch_s
     label = df[label_name].values
     model = build_model(learning_rate, num_features)
     output = train_model(model, features, label, epochs, batch_size)
-    print('{}'.format(model_info(feature_names, label_name, model_output)))
+    
+    print('{}'.format(model_info(feature_names, label_name, output)))
+    
     return model, output
+
 
 def build_batch(df, batch_size):
     batch = df.sample(n=batch_size).copy()
