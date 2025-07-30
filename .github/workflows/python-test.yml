@@ -25,4 +25,4 @@ jobs:
           pip install tensorflow pandas numpy keras pytest
       - name: Run tests
         run: |
-          pytest test_taxi_model.py
+          pytest test_main.py

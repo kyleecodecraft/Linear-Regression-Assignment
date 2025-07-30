@@ -1,7 +1,7 @@
 import unittest
 import main as tm
 
-class TestTaxiModel(unittest.TestCase):
+class TestUnit(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.df = tm.load_data("data/chicago_taxi_train.csv")
