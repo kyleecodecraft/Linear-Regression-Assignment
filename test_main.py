@@ -4,7 +4,7 @@ import main as tm
 class TestTaxiModel(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.df = tm.load_data("chicago_taxi_train.csv")
+        cls.df = tm.load_data("data/chicago_taxi_train.csv")
         cls.df = tm.add_trip_minutes(cls.df)
 
     def test_load_data(self):

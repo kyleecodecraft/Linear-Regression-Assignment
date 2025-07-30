@@ -149,13 +149,3 @@ def predict_fare(model, df, features, label, batch_size=50):
         results["L1_LOSS"].append(abs(observed - predicted))
 
     return pd.DataFrame(results)
-
-
-df = pd.read_csv("chicago_taxi_train.csv")
-learning_rate = 0.001
-epochs = 20
-batch_size = 50
-features = ["TRIP_MILES"]
-label = 'FARE'
-model_1 = run_experiment(df, features, label, learning_rate, epochs, batch_size)
-print(model_1)
